@@ -1,32 +1,32 @@
 #include <stdio.h>
-#include 'rivercross.h'
+#include "riverCross.h"
 
-Eat(){
+int Eat(){
 	
 	
 }
 
-Cross(){
+int Cross(){
 	
 	
 }
 
-Checking(){
+int Checking(){
 	
 	
 }
 
-AllObjectsCrossed(){
+int AllObjectsCrossed(){
 	
 	
 }
 
-Win(){
+int Win(){
 	
 	
 }
 
-GameOver(){
+int GameOver(){
 	
 	
 }

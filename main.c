@@ -1,12 +1,10 @@
 #include <stdio.h>
-#include 'rivercross.h'
+#include "riverCross.h"
 
 int main(){
 	
-
-
-
-
-
+	printf("Juego en proceso xd");
+	
 	return 0;
+	
 } 

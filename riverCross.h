@@ -2,12 +2,19 @@
 #define RIVERCROSS_H
 
 typedef enum{
-	RIGHTSIDE, LEFTSIDE
+	NEAR, FAR
 }SIDE;
 
-Eat();
+int Eat();
 
-Cross();
+int Cross();
 
-Checking();
+int Checking();
 
+int AllObjectsCrossed();
+
+int Win();
+
+int GameOver();
+
+#endif
