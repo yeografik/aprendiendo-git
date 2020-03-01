@@ -5,16 +5,14 @@ typedef enum{
 	NEAR, FAR
 }SIDE;
 
-int Eat();
+void SetGame(SIDE* farmer, SIDE* fox, SIDE* chicken, SIDE* corn);
 
-int Cross();
+void PrintStatus(SIDE farmer, SIDE fox, SIDE chicken, SIDE corn);
 
-int Checking();
+void Cross(int option, SIDE farmer, SIDE fox, SIDE chicken, SIDE corn);
 
-int AllObjectsCrossed();
+int Win(SIDE farmer, SIDE fox, SIDE chicken, SIDE corn);
 
-int Win();
-
-int GameOver();
+int Lose(SIDE farmer, SIDE fox, SIDE chicken, SIDE corn);
 
 #endif
