@@ -112,7 +112,7 @@ int Win(SIDE farmer, SIDE fox, SIDE chicken, SIDE corn){
 	//This fuction checks if you won
 
 	if ((farmer == FAR) && (farmer == fox) && (fox == chicken) && (chicken == corn)){ //Basicly, all the objects acroos the river
-		printf("You win!\n");
+		printf("You win!\n\n");
 		return 1;
 	}else{
 		return 0;
@@ -121,12 +121,13 @@ int Win(SIDE farmer, SIDE fox, SIDE chicken, SIDE corn){
 }
 
 int Lose(SIDE farmer, SIDE fox, SIDE chicken, SIDE corn){
+	//This function checks if you lost
 	
 	if ((fox == chicken) && (farmer != fox)){
-		printf("The chicken was eaten by the fox! You lose...\n");
+		printf("The chicken was eaten by the fox! You lose...\n\n");
 		return 1;
 	}else if ((chicken == corn) && (farmer != chicken)){
-		printf("The corn was eaten by the chicken! You lose...\n");
+		printf("The corn was eaten by the chicken! You lose...\n\n");
 		return 1;
 	}else{
 		return 0;

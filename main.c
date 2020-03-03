@@ -7,9 +7,9 @@ SIDE farmen1, fox1, chicken1, corn1;
 
 int main(){
 	
-	printf("Juego en proceso xd \nWelcome to the open beta \n\n");
-	
-	SetGame(&farmen1, &fox1, &chicken1, &corn1); //Le da a las variable sus valores iniciales
+	system("clear");
+	printf("Welcome to the RiverCross v1.0 \n\n");
+	SetGame(&farmen1, &fox1, &chicken1, &corn1); ////Set the variables initials values
 		
 	do{
 
