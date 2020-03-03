@@ -16,8 +16,7 @@ int main(){
 		PrintStatus(farmen1, fox1, chicken1, corn1); //Show current positions
 		Cross(OptionMenu(), &farmen1, &fox1, &chicken1, &corn1); 
 		
-	}while(1 == 1/*!Win(farmen1, fox1, chicken1, corn1) || !Lose(farmen1, fox1, chicken1, corn1)*/); //Checkea si el juego continua o no
-	// 1 == 1 solo para testeo
+	}while( !Lose(farmen1, fox1, chicken1, corn1) && !Win(farmen1, fox1, chicken1, corn1) ); //While you dont win or dont lose the game continue
 	
 	return 0;
 	

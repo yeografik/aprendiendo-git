@@ -109,14 +109,28 @@ void ChangePos(SIDE* farmer, SIDE* object){
 }
 
 int Win(SIDE farmer, SIDE fox, SIDE chicken, SIDE corn){
-	
-	//En caso de que gane que devuelva 1!
+	//This fuction checks if you won
+
+	if ((farmer == FAR) && (farmer == fox) && (fox == chicken) && (chicken == corn)){ //Basicly, all the objects acroos the river
+		printf("You win!\n");
+		return 1;
+	}else{
+		return 0;
+	}
 	
 }
 
 int Lose(SIDE farmer, SIDE fox, SIDE chicken, SIDE corn){
 	
-	//En caso de que pierda que devuelva 1!
+	if ((fox == chicken) && (farmer != fox)){
+		printf("The chicken was eaten by the fox! You lose...\n");
+		return 1;
+	}else if ((chicken == corn) && (farmer != chicken)){
+		printf("The corn was eaten by the chicken! You lose...\n");
+		return 1;
+	}else{
+		return 0;
+	}
 	
 }
 
