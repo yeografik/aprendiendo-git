@@ -20,27 +20,27 @@ void PrintStatus(SIDE farmer, SIDE fox, SIDE chicken, SIDE corn){
 	printf("Current positions:\n\n");
 
 	if(fox == NEAR){
-		printf("1-Fox: near\n");
+		printf("Fox: near\n");
 	}else{
-		printf("1-Fox: far\n");
+		printf("Fox: far\n");
 	}
 	
 	if(chicken == NEAR){
-		printf("2-Chicken: near\n");
+		printf("Chicken: near\n");
 	}else{
-		printf("2-Chicken: far\n");
+		printf("Chicken: far\n");
 	}
 	
 	if(corn == NEAR){
-		printf("3-Corn: near\n");
+		printf("Corn: near\n");
 	}else{
-		printf("3-Corn: far\n");
+		printf("Corn: far\n");
 	}
 
 	if(farmer == NEAR){
-		printf("4-Farmer: near\n");
+		printf("Farmer: near\n");
 	}else{
-		printf("4-Farmer: far\n");
+		printf("Farmer: far\n");
 	}
 
 	printf("\n");
@@ -58,7 +58,7 @@ int OptionMenu(){
 	scanf("%d", &op);
 		
 	while (op < 1 || op > 4){
-		printf("Invalid option please retry \n");
+		printf("Invalid option please retry\n\nOption:");
 		scanf("%d", &op);
 	}
 		
@@ -123,10 +123,10 @@ int Win(SIDE farmer, SIDE fox, SIDE chicken, SIDE corn){
 int Lose(SIDE farmer, SIDE fox, SIDE chicken, SIDE corn){
 	//This function checks if you lost
 	
-	if ((fox == chicken) && (farmer != fox)){
+	if ((fox == chicken) && (farmer != fox)){ //Fox alone with the chicken...
 		printf("The chicken was eaten by the fox! You lose...\n\n");
 		return 1;
-	}else if ((chicken == corn) && (farmer != chicken)){
+	}else if ((chicken == corn) && (farmer != chicken)){ //Chicken alone with the corn...
 		printf("The corn was eaten by the chicken! You lose...\n\n");
 		return 1;
 	}else{
