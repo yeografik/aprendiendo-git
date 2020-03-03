@@ -1,8 +1,10 @@
 #include <stdio.h>
-#include "rivercross.h"
+#include <stdlib.h>
+#include "riverCross.h"
 
 void SetGame(SIDE* farmer, SIDE* fox, SIDE* chicken, SIDE* corn){
 	//Setea con sus valores iniciales a las variables
+	//Set the variables initials values
 
 	*farmer = NEAR;
 	*fox = NEAR;
@@ -15,29 +17,33 @@ void PrintStatus(SIDE farmer, SIDE fox, SIDE chicken, SIDE corn){
 	//Toma como parametro la posicion actual de los elementos
 	//para poder mostrarla al usuario, con el fin de que elegi una opcion luego.
 	
-	if(farmer == NEAR){
-		printf("1-Farmer: near\n");
-	}else{
-		printf("1-Farmer: far\n");
-	}
-	
+	printf("Current positions:\n\n");
+
 	if(fox == NEAR){
-		printf("2-Fox: near\n");
+		printf("1-Fox: near\n");
 	}else{
-		printf("2-Fox: far\n");
+		printf("1-Fox: far\n");
 	}
 	
 	if(chicken == NEAR){
-		printf("3-Chicken: near\n");
+		printf("2-Chicken: near\n");
 	}else{
-		printf("3-Chicken: far\n");
+		printf("2-Chicken: far\n");
 	}
 	
 	if(corn == NEAR){
-		printf("4-Corn: near\n");
+		printf("3-Corn: near\n");
 	}else{
-		printf("4-Corn: far\n");
+		printf("3-Corn: far\n");
 	}
+
+	if(farmer == NEAR){
+		printf("4-Farmer: near\n");
+	}else{
+		printf("4-Farmer: far\n");
+	}
+
+	printf("\n");
 	
 }
 
@@ -45,8 +51,8 @@ int OptionMenu(){
 	//Guarda la opcion elegida por el usuario
 	//Stores the selected option by the user
 	
-	printf("Select an object to travel with the farmer or travel alone \n");
-	printf("1-Fox \n2-Chicken \n3-Corn \n4-Travel alone \n");
+	printf("Select an object to travel with the farmer or travel alone \n\n");
+	printf("1-Fox \n2-Chicken \n3-Corn \n4-Travel alone\n\nOption:");
 	
 	int op;
 	scanf("%d", &op);
@@ -65,6 +71,8 @@ void Cross(int option, SIDE* farmer, SIDE* fox, SIDE* chicken, SIDE* corn){
 
 	//Changes farmer or farmer and object's position based on the selected
 	//option if they are on the same side
+
+	system("clear");
 	
 	if(option == 1 && *farmer == *fox){
 		ChangePos(farmer, fox);
@@ -80,7 +88,7 @@ void Cross(int option, SIDE* farmer, SIDE* fox, SIDE* chicken, SIDE* corn){
 		ChangePos(farmer, &empty);
 	
 	}else{
-		printf("farmer isn't in the same side \n");
+		printf("farmer isn't in the same side!\n\n");
 	
 	}
 
@@ -88,7 +96,6 @@ void Cross(int option, SIDE* farmer, SIDE* fox, SIDE* chicken, SIDE* corn){
 
 void ChangePos(SIDE* farmer, SIDE* object){
 	//Cambia la posicion del farmer y el objeto
-
 	//Changes farmer and object's position
 	
 	if(*farmer == NEAR){
