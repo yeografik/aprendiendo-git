@@ -1,20 +1,21 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "riverCross.h"
-// #include "path/file name"
+//#include "path/file name"
 
 SIDE farmen1, fox1, chicken1, corn1;
 
 int main(){
 	
-	system("clear");
-	printf("Welcome to the RiverCross v1.0 \n\n");
-	SetGame(&farmen1, &fox1, &chicken1, &corn1); ////Set the variables initials values
+	system("CLS");
+	printf("Welcome to RiverCross v1.0 \n\n");
+	SetGame(&farmen1, &fox1, &chicken1, &corn1); //Set the variables initials values
+	
 		
 	do{
-
+		system("CLS");
 		PrintStatus(farmen1, fox1, chicken1, corn1); //Show current positions
-		Cross(OptionMenu(), &farmen1, &fox1, &chicken1, &corn1); 
+		Cross(OptionMenu(), &farmen1, &fox1, &chicken1, &corn1);
 		
 	}while( !Lose(farmen1, fox1, chicken1, corn1) && !Win(farmen1, fox1, chicken1, corn1) ); //While you dont win or dont lose the game continue
 	
